@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Professional video editing, thumbnail design and social media creative services." />
+  <title>EDITLAB — Video Editor & Visual Creator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+:root{
+  --bg:#0a0a0b; --surface:#111114; --surface2:#17171a; --text:#f3f2ed; --muted:#9c9ba0; --line:#29292d; --accent:#d9ff4d; --accent2:#bff42f;
+  --max:1180px; --radius:24px; --shadow:0 20px 70px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box;margin:0;padding:0} html{scroll-behavior:smooth} body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);line-height:1.5;overflow-x:hidden} body:has(details[open]){scroll-behavior:auto} a{color:inherit;text-decoration:none} button{font:inherit;color:inherit}
+.noise{position:fixed;inset:0;pointer-events:none;opacity:.03;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.container{width:min(var(--max),calc(100% - 40px));margin:auto}.section-pad{padding:120px 0}.site-header{position:sticky;top:0;z-index:20;background:rgba(10,10,11,.78);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.05)}
+.nav-wrap{height:76px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:10px;font-family:'Space Grotesk',sans-serif;font-weight:700;letter-spacing:.06em}.brand span:last-child span{color:var(--accent)}.brand-mark{width:31px;height:31px;display:grid;place-items:center;border:1px solid var(--accent);color:var(--accent);font-size:15px}.nav{display:flex;align-items:center;gap:28px;color:#d7d6d1;font-size:14px}.nav a{transition:.2s}.nav a:hover{color:var(--accent)}.nav-cta{border:1px solid var(--line);padding:10px 16px;border-radius:999px}.menu-btn{display:none;background:none;border:0;width:40px;height:40px}.menu-btn span{display:block;width:22px;height:2px;background:#fff;margin:6px auto}
+.hero{min-height:calc(100vh - 76px);display:flex;align-items:center;padding-top:88px}.hero-grid{display:grid;grid-template-columns:1.03fr .97fr;gap:70px;align-items:center}.eyebrow,.kicker{font-size:11px;letter-spacing:.16em;color:var(--muted);font-weight:700}.dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 15px rgba(217,255,77,.8);margin-right:9px}.hero h1,.section-head h2,.about h2,.faq h2,.contact h2{font-family:'Space Grotesk',sans-serif;line-height:.95;letter-spacing:-.05em}.hero h1{font-size:clamp(58px,7vw,96px);max-width:750px;margin:24px 0}.hero h1 span,.section-head em,.about em,.faq em,.contact em{font-style:normal;color:var(--accent)}.hero-lead{font-size:18px;color:#bebdb9;max-width:620px}.hero-actions{display:flex;gap:12px;margin:32px 0}.btn{display:inline-flex;align-items:center;gap:14px;padding:14px 20px;border-radius:999px;font-size:14px;font-weight:700;transition:.25s}.btn-primary{background:var(--accent);color:#0a0a0b}.btn-primary:hover{transform:translateY(-2px);background:#e2ff6a}.btn-ghost{border:1px solid var(--line);background:rgba(255,255,255,.02)}.btn-ghost:hover{border-color:#555;transform:translateY(-2px)}.hero-proof{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);padding-top:18px;gap:15px}.hero-proof strong,.hero-proof span{display:block}.hero-proof strong{font-size:13px}.hero-proof span{font-size:11px;color:var(--muted);margin-top:4px}
+.hero-showcase{position:relative;min-height:600px;display:grid;place-items:center}.showcase-card{width:min(480px,90%);background:var(--surface);border:1px solid var(--line);padding:13px;box-shadow:var(--shadow);transform:rotate(3deg)}.frame-top,.frame-bottom{display:flex;justify-content:space-between;padding:9px 2px;font-size:9px;letter-spacing:.12em;color:#828187}.frame-art{height:490px;position:relative;overflow:hidden}.art-main{background:radial-gradient(circle at 70% 20%,#d4ff4d 0,#536516 16%,#181d13 35%,#0b0b0c 72%)}.art-main:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,transparent 45%,rgba(217,255,77,.16) 46%,transparent 53%),linear-gradient(165deg,transparent 58%,rgba(255,255,255,.07) 58%,transparent 72%)}.scanline{position:absolute;inset:0;background:repeating-linear-gradient(to bottom,transparent 0 9px,rgba(255,255,255,.025) 10px)}.art-copy{position:absolute;left:30px;bottom:38px}.art-copy small{display:block;color:#d9ff4d;font-size:10px;letter-spacing:.22em;margin-bottom:10px}.art-copy strong{font-family:'Space Grotesk';font-size:48px;line-height:.9;letter-spacing:-.06em}.play{position:absolute;right:26px;bottom:24px;width:46px;height:46px;border:1px solid rgba(255,255,255,.35);border-radius:50%;display:grid;place-items:center;font-size:13px;background:rgba(0,0,0,.25)}.float-card{position:absolute;background:#131317;border:1px solid var(--line);box-shadow:var(--shadow);padding:18px;width:190px}.float-card small{color:var(--accent);display:block;font-size:10px;margin-bottom:22px}.float-card strong{font-family:'Space Grotesk';font-size:19px;line-height:.95}.float-card span{display:block;color:var(--muted);font-size:9px;margin-top:18px;letter-spacing:.08em}.card-a{left:2px;top:84px;transform:rotate(-8deg)}.card-b{right:0;bottom:58px;transform:rotate(-6deg)}
+.ticker{overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#0e0f10}.ticker-track{display:flex;gap:22px;white-space:nowrap;padding:14px 0;min-width:max-content;animation:marquee 28s linear infinite;font-family:'Space Grotesk';font-size:12px;letter-spacing:.12em}.ticker i{color:var(--accent);font-style:normal}@keyframes marquee{to{transform:translateX(-50%)}}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:50px;margin-bottom:46px}.section-head h2{font-size:clamp(44px,5vw,70px);margin-top:12px}.section-note{color:var(--muted);max-width:420px;font-size:14px}.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.service-card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:25px;min-height:280px;position:relative;transition:.3s}.service-card:hover{transform:translateY(-5px);border-color:#444}.service-card.featured{background:linear-gradient(155deg,#151817,#101110)}.service-no{position:absolute;right:20px;top:20px;font-size:10px;color:#666}.service-icon{color:var(--accent);font-size:27px;margin-bottom:38px}.service-card h3{font-family:'Space Grotesk';font-size:24px;letter-spacing:-.04em}.service-card p{color:var(--muted);font-size:13px;margin:10px 0 25px}.tags{display:flex;flex-wrap:wrap;gap:6px}.tags span{padding:7px 9px;border:1px solid #2a2a2e;border-radius:999px;color:#bebdc0;font-size:10px}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}.filter{border:1px solid var(--line);background:transparent;border-radius:999px;padding:9px 13px;font-size:11px;cursor:pointer;color:#aaa}.filter.active,.filter:hover{background:var(--accent);color:#0a0a0b;border-color:var(--accent)}.portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.project-card{background:var(--surface);border:1px solid var(--line);border-radius:18px;overflow:hidden}.project-wide{grid-column:span 2}.project-tall{grid-row:span 2}.project-visual{height:310px;position:relative;overflow:hidden}.project-tall .project-visual{height:634px}.project-label,.project-meta{position:absolute;z-index:2;font-size:9px;letter-spacing:.13em;color:#e7e6e0}.project-label{top:16px;left:18px}.project-meta{bottom:16px;left:18px;color:#bdbcb7}.visual-center{position:absolute;left:25px;bottom:54px;font-family:'Space Grotesk';font-size:48px;line-height:.87;letter-spacing:-.06em}.visual-center.small{font-size:36px}.visual-center em{color:var(--accent);font-style:normal}.grad-1{background:radial-gradient(circle at 75% 22%,#c9ff3e,transparent 19%),linear-gradient(145deg,#2b3018,#0f1110 54%,#2b2a16)}.grad-2{background:radial-gradient(circle at 40% 35%,#eee,transparent 3%),linear-gradient(135deg,#252c33,#0d0f12 60%,#151a1e)}.grad-3{background:radial-gradient(circle at 55% 45%,rgba(217,255,77,.8),transparent 12%),linear-gradient(135deg,#24311e,#111514 65%,#0b0b0c)}.grad-4{background:radial-gradient(circle at 70% 25%,#c5ff52,transparent 13%),linear-gradient(135deg,#1d2118,#121313 60%,#251f14)}.grad-5{background:linear-gradient(135deg,#28242a,#141317 45%,#1d2312)}.grad-6{background:radial-gradient(circle at 20% 15%,rgba(217,255,77,.45),transparent 20%),linear-gradient(180deg,#282b22,#101111 58%,#090a0a)}.project-copy{padding:15px 17px 18px;display:flex;align-items:center;justify-content:space-between}.project-copy h3{font-family:'Space Grotesk';font-size:15px}.project-copy p{font-size:11px;color:var(--muted);margin-top:2px}.project-copy>span{font-size:18px}
+.split-feature{background:#0f1011}.split-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:75px}.comparison{height:480px;position:relative;display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:24px;overflow:hidden;background:#141516}.comparison-before,.comparison-after{display:flex;flex-direction:column;justify-content:flex-end;padding:24px}.comparison-before{background:linear-gradient(160deg,#2e302c,#141514)}.comparison-after{background:linear-gradient(160deg,#223016,#0c0f0d)}.comparison-before span,.comparison-after span{font-size:9px;letter-spacing:.15em;color:#aaa}.comparison-before div,.comparison-after div{font-family:'Space Grotesk';font-size:58px;line-height:.83;letter-spacing:-.06em;margin-top:10px}.comparison-after em{color:var(--accent);font-style:normal}.comparison-handle{position:absolute;left:50%;top:0;bottom:0;width:1px;background:rgba(255,255,255,.35)}.comparison-handle span{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:42px;height:42px;border-radius:50%;background:#fff;color:#111;display:grid;place-items:center;font-size:16px}.large-copy{font-size:19px;color:#bbb8b2;max-width:590px;margin:24px 0}.stat-row{display:flex;gap:25px;margin-top:35px}.stat-row div{border-top:1px solid var(--line);padding-top:12px;min-width:130px}.stat-row strong{color:var(--accent);display:block;font-size:11px}.stat-row span{display:block;font-size:11px;color:#a5a3a0;margin-top:5px}
+.process-grid{display:grid;grid-template-columns:repeat(5,1fr);border:1px solid var(--line);border-radius:20px;overflow:hidden}.step{padding:27px 22px;min-height:220px;border-right:1px solid var(--line)}.step:last-child{border-right:0}.step>span{color:var(--accent);font-size:11px}.step h3{font-family:'Space Grotesk';margin-top:45px;font-size:22px}.step p{font-size:12px;color:var(--muted);margin-top:10px}
+.about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:75px;align-items:center}.about-card{border:1px solid var(--line);background:var(--surface);border-radius:24px;padding:12px;position:relative}.portrait-placeholder{height:520px;border-radius:17px;background:radial-gradient(circle at 60% 25%,#c4fa58,transparent 10%),linear-gradient(145deg,#292d25,#101212 65%);display:grid;place-items:center}.portrait-placeholder span{font-family:'Space Grotesk';font-size:38px;line-height:.9;text-align:center;color:#cbcac4;letter-spacing:-.05em}.about-sign{position:absolute;right:27px;bottom:23px;color:var(--accent);font-size:10px;letter-spacing:.18em}.tool-list{display:flex;flex-wrap:wrap;gap:8px}.tool-list span{border:1px solid var(--line);padding:9px 11px;border-radius:999px;color:#c7c5be;font-size:10px}
+.faq{background:#0f1011}.faq-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:80px}.faq-list details{border-top:1px solid var(--line);padding:21px 0}.faq-list details:last-child{border-bottom:1px solid var(--line)}summary{list-style:none;cursor:pointer;font-family:'Space Grotesk';font-size:18px;display:flex;justify-content:space-between;gap:20px}summary::-webkit-details-marker{display:none}summary:after{content:'+';color:var(--accent)}details[open] summary:after{content:'−'}details p{color:var(--muted);font-size:13px;max-width:700px;margin-top:13px}
+.contact{padding-top:90px}.contact-box{border:1px solid var(--line);border-radius:28px;background:linear-gradient(120deg,#171b17,#101111 60%);padding:55px;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end}.contact h2{font-size:clamp(46px,5vw,76px);margin:12px 0 15px}.contact p{color:#aaa8a2;font-size:14px;max-width:570px}.contact-actions{display:flex;flex-direction:column;align-items:flex-end;gap:10px}.contact-links{display:flex;gap:18px;font-size:11px;color:#999;margin-top:5px}.contact-links a:hover{color:var(--accent)}.footer{border-top:1px solid var(--line);padding:22px 0}.footer-wrap{display:flex;justify-content:space-between;gap:20px;color:#777;font-size:10px;letter-spacing:.04em}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}.reveal.in{opacity:1;transform:none}
+@media(max-width:1000px){.hero-grid,.split-grid,.about-grid{grid-template-columns:1fr}.hero-showcase{min-height:570px}.service-grid{grid-template-columns:repeat(2,1fr)}.portfolio-grid{grid-template-columns:repeat(2,1fr)}.project-wide{grid-column:span 2}.process-grid{grid-template-columns:repeat(2,1fr)}.step{border-bottom:1px solid var(--line)}.step:nth-child(2n){border-right:0}.section-head{align-items:start;flex-direction:column}.contact-box{grid-template-columns:1fr}.contact-actions{align-items:flex-start}.faq-grid{grid-template-columns:1fr}}
+@media(max-width:700px){.container{width:min(var(--max),calc(100% - 26px))}.section-pad{padding:82px 0}.nav{position:absolute;left:13px;right:13px;top:70px;background:#111114;border:1px solid var(--line);border-radius:18px;padding:10px;display:none;flex-direction:column;align-items:stretch;gap:0}.nav.open{display:flex}.nav a{padding:12px}.nav-cta{border:0;text-align:left}.menu-btn{display:block}.hero{padding-top:55px}.hero h1{font-size:58px}.hero-lead{font-size:16px}.hero-proof{grid-template-columns:1fr;gap:12px}.hero-showcase{min-height:500px}.frame-art{height:405px}.float-card{width:145px;padding:14px}.card-a{left:-2px;top:55px}.card-b{right:-2px;bottom:25px}.service-grid,.portfolio-grid,.process-grid{grid-template-columns:1fr}.project-wide{grid-column:auto}.project-tall{grid-row:auto}.project-tall .project-visual{height:310px}.visual-center{font-size:38px}.comparison{height:380px}.comparison-before div,.comparison-after div{font-size:40px}.stat-row{flex-wrap:wrap}.contact-box{padding:30px 24px}.contact h2{font-size:48px}.footer-wrap{flex-direction:column}}
+
+</style>
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="#top" class="brand" aria-label="EDITLAB home">
+        <span class="brand-mark">E</span>
+        <span>EDIT<span>LAB</span></span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="#work">Work</a>
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="nav-cta">Let's work</a>
+      </nav>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero section-pad">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow"><span class="dot"></span> VIDEO EDITOR · THUMBNAIL DESIGN · SOCIAL CREATIVE</div>
+          <h1>Make people <span>stop scrolling.</span></h1>
+          <p class="hero-lead">I turn raw clips, ideas and ordinary footage into sharp, story-driven visuals built for YouTube, Instagram, WhatsApp and brands.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#work">Explore my work <span>↗</span></a>
+            <a class="btn btn-ghost" href="#contact">Get a quote <span>→</span></a>
+          </div>
+          <div class="hero-proof">
+            <div><strong>Short-form</strong><span>Reels · Shorts · Status</span></div>
+            <div><strong>Long-form</strong><span>YouTube · Story videos</span></div>
+            <div><strong>Design</strong><span>Thumbnails · Posts · Ads</span></div>
+          </div>
+        </div>
+
+        <div class="hero-showcase reveal">
+          <div class="showcase-card main-frame">
+            <div class="frame-top"><span>01 / SHOWREEL</span><span>00:18</span></div>
+            <div class="frame-art art-main">
+              <div class="scanline"></div>
+              <div class="art-copy"><small>VISUAL STORYTELLING</small><strong>FROM RAW<br/>TO REMARKABLE.</strong></div>
+              <div class="play">▶</div>
+            </div>
+            <div class="frame-bottom"><span>EDITLAB // CREATIVE CUT</span><span>1080P</span></div>
+          </div>
+          <div class="float-card card-a"><small>01</small><strong>REELS<br/>THAT HIT</strong><span>9:16 · CAPTIONS · SFX</span></div>
+          <div class="float-card card-b"><small>02</small><strong>THUMBNAILS<br/>THAT CLICK</strong><span>YT · SOCIAL · ADS</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="Services ticker">
+      <div class="ticker-track">
+        <span>REELS</span><i>✦</i><span>YOUTUBE</span><i>✦</i><span>THUMBNAILS</span><i>✦</i><span>PRODUCT ADS</span><i>✦</i><span>STORY EDITS</span><i>✦</i><span>FESTIVAL EDITS</span><i>✦</i><span>STUDY VIDEOS</span><i>✦</i><span>REELS</span><i>✦</i><span>YOUTUBE</span><i>✦</i>
+      </div>
+    </section>
+
+    <section id="services" class="section-pad services">
+      <div class="container">
+        <div class="section-head reveal"><div><p class="kicker">WHAT I DO</p><h2>Editing for every<br/><em>content moment.</em></h2></div><p class="section-note">Not boxed into one format. Need a reel today and a product ad tomorrow? Same editor, same creative standard.</p></div>
+        <div class="service-grid">
+          <article class="service-card featured reveal"><div class="service-no">01</div><div class="service-icon">◒</div><h3>Social Video</h3><p>Fast, clean, retention-first edits made for mobile attention.</p><div class="tags"><span>Instagram Reels</span><span>YouTube Shorts</span><span>WhatsApp Status</span><span>Story Videos</span></div></article>
+          <article class="service-card reveal"><div class="service-no">02</div><div class="service-icon">◈</div><h3>YouTube</h3><p>Long-form storytelling with pacing, captions, sound and visual rhythm.</p><div class="tags"><span>YouTube Videos</span><span>Study Content</span><span>Explainers</span><span>Vlogs</span></div></article>
+          <article class="service-card reveal"><div class="service-no">03</div><div class="service-icon">✦</div><h3>Business & Product</h3><p>Promos and product-focused videos designed to explain and sell without feeling noisy.</p><div class="tags"><span>Product Ads</span><span>Business Reels</span><span>Promotional Videos</span></div></article>
+          <article class="service-card reveal"><div class="service-no">04</div><div class="service-icon">▣</div><h3>Thumbnails & Design</h3><p>Scroll-stopping visual packaging for videos, posts and campaigns.</p><div class="tags"><span>YouTube Thumbnails</span><span>YT Posts</span><span>Instagram Posts</span><span>Festival Creatives</span></div></article>
+          <article class="service-card reveal"><div class="service-no">05</div><div class="service-icon">⌁</div><h3>Cinematic & Story Edits</h3><p>Moody visual flow, music-led cuts, keyframes, transitions and atmosphere.</p><div class="tags"><span>Cinematic</span><span>Storytelling</span><span>Music Sync</span><span>SFX</span></div></article>
+          <article class="service-card reveal"><div class="service-no">06</div><div class="service-icon">+</div><h3>Custom Creative</h3><p>Have an idea that does not fit a box? Build it from scratch with a clear visual direction.</p><div class="tags"><span>Custom Edits</span><span>Campaign Assets</span><span>Creative Experiments</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="section-pad work">
+      <div class="container">
+        <div class="section-head reveal"><div><p class="kicker">SELECTED WORK</p><h2>A portfolio that<br/><em>shows, not tells.</em></h2></div><p class="section-note">Replace these demo frames with your real projects. Each card is ready for a thumbnail, reel preview or case study.</p></div>
+        <div class="filters" role="tablist" aria-label="Portfolio filters">
+          <button class="filter active" data-filter="all">All</button><button class="filter" data-filter="reel">Reels</button><button class="filter" data-filter="youtube">YouTube</button><button class="filter" data-filter="business">Business</button><button class="filter" data-filter="thumb">Thumbnails</button><button class="filter" data-filter="social">Social</button>
+        </div>
+        <div class="portfolio-grid" id="portfolioGrid">
+          <article class="project-card project-wide reveal" data-type="reel"><div class="project-visual grad-1"><span class="project-label">REEL / 9:16</span><div class="visual-center">HOOK.<br/>HOLD.<br/><em>DELIVER.</em></div><span class="project-meta">Captions · SFX · Beat Sync</span></div><div class="project-copy"><div><h3>High-Retention Reel</h3><p>Short-form social edit</p></div><span>↗</span></div></article>
+          <article class="project-card reveal" data-type="youtube"><div class="project-visual grad-2"><span class="project-label">YOUTUBE / 16:9</span><div class="visual-center small">THE STORY<br/><em>STARTS HERE.</em></div><span class="project-meta">Pacing · Audio · B-roll</span></div><div class="project-copy"><div><h3>Story-driven YouTube</h3><p>Long-form edit</p></div><span>↗</span></div></article>
+          <article class="project-card reveal" data-type="business"><div class="project-visual grad-3"><span class="project-label">PRODUCT AD</span><div class="visual-center small">SEE IT.<br/><em>WANT IT.</em></div><span class="project-meta">Product focus · Motion type</span></div><div class="project-copy"><div><h3>Product Launch Cut</h3><p>Business / advertising</p></div><span>↗</span></div></article>
+          <article class="project-card reveal" data-type="thumb"><div class="project-visual grad-4"><span class="project-label">THUMBNAIL / 1280×720</span><div class="visual-center small">WOULD<br/><em>YOU CLICK?</em></div><span class="project-meta">Hierarchy · Contrast · Curiosity</span></div><div class="project-copy"><div><h3>YouTube Thumbnail</h3><p>Creator packaging</p></div><span>↗</span></div></article>
+          <article class="project-card reveal" data-type="social"><div class="project-visual grad-5"><span class="project-label">SOCIAL / 1:1</span><div class="visual-center small">SIMPLE<br/><em>STANDS OUT.</em></div><span class="project-meta">Typography · Layout · Brand tone</span></div><div class="project-copy"><div><h3>Social Post Series</h3><p>Instagram / YouTube post</p></div><span>↗</span></div></article>
+          <article class="project-card project-tall reveal" data-type="reel"><div class="project-visual grad-6"><span class="project-label">STORY / 9:16</span><div class="visual-center small">ONE FRAME.<br/><em>ONE FEELING.</em></div><span class="project-meta">Mood · Keyframes · Sound design</span></div><div class="project-copy"><div><h3>Atmospheric Story Edit</h3><p>Vertical storytelling</p></div><span>↗</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad split-feature">
+      <div class="container split-grid">
+        <div class="comparison reveal">
+          <div class="comparison-before"><span>RAW</span><div>YOUR<br/>FOOTAGE</div></div>
+          <div class="comparison-after"><span>FINAL</span><div>YOUR<br/><em>STORY.</em></div></div>
+          <div class="comparison-handle"><span>↔</span></div>
+        </div>
+        <div class="reveal"><p class="kicker">THE DIFFERENCE</p><h2>Editing is not just<br/>cutting clips.</h2><p class="large-copy">It is knowing what to remove, what to emphasize, when to hit the beat, when to let a moment breathe, and how to make the viewer stay for the next second.</p><div class="stat-row"><div><strong>01</strong><span>Story & pacing</span></div><div><strong>02</strong><span>Motion & keyframes</span></div><div><strong>03</strong><span>Sound & atmosphere</span></div></div></div>
+      </div>
+    </section>
+
+    <section id="process" class="section-pad process">
+      <div class="container">
+        <div class="section-head reveal"><div><p class="kicker">HOW IT WORKS</p><h2>Simple process.<br/><em>Serious output.</em></h2></div><p class="section-note">No unnecessary back-and-forth. Tell me what you need, share the assets, and we move toward a final cut.</p></div>
+        <div class="process-grid">
+          <div class="step reveal"><span>01</span><h3>Brief</h3><p>Share your footage, reference, platform, goal and any must-have details.</p></div>
+          <div class="step reveal"><span>02</span><h3>Direction</h3><p>We lock the style, pacing, format and visual approach before the main edit.</p></div>
+          <div class="step reveal"><span>03</span><h3>Edit</h3><p>Cutting, captions, motion, music, SFX, color and finishing are handled together.</p></div>
+          <div class="step reveal"><span>04</span><h3>Review</h3><p>You review the draft and give focused feedback for revisions.</p></div>
+          <div class="step reveal"><span>05</span><h3>Delivery</h3><p>Final export is delivered in the platform-ready format you need.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section-pad about">
+      <div class="container about-grid">
+        <div class="about-card reveal"><div class="portrait-placeholder"><span>YOUR<br/>PHOTO</span></div><div class="about-sign">EDITLAB™</div></div>
+        <div class="reveal"><p class="kicker">ABOUT THE EDITOR</p><h2>Creative thinking,<br/><em>practical editing.</em></h2><p class="large-copy">I focus on edits that are visually strong but still communicate clearly. From quick social cuts to detailed product videos and thumbnails, the goal is the same: make the content feel intentional.</p><div class="tool-list"><span>Video Editing</span><span>Thumbnail Design</span><span>Motion & Keyframes</span><span>Captions</span><span>Sound Design</span><span>Color Finishing</span></div></div>
+      </div>
+    </section>
+
+    <section class="section-pad faq">
+      <div class="container faq-grid">
+        <div class="reveal"><p class="kicker">FAQ</p><h2>Questions before<br/><em>we create?</em></h2></div>
+        <div class="faq-list reveal">
+          <details open><summary>What kind of videos can you edit?</summary><p>Reels, Shorts, WhatsApp Status, YouTube videos, story videos, product ads, business content, festival edits, study videos and custom social content.</p></details>
+          <details><summary>Can you make thumbnails too?</summary><p>Yes. You can book editing and thumbnail design together or request thumbnails as a separate service.</p></details>
+          <details><summary>Can I send a reference video?</summary><p>Yes. References are useful for understanding pacing, mood, typography, transitions and overall direction.</p></details>
+          <details><summary>Do you make custom edits?</summary><p>Yes. Send the idea even if it does not fit one of the listed categories. A custom brief can be built around it.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section-pad contact">
+      <div class="container contact-box reveal">
+        <div><p class="kicker">LET'S CREATE</p><h2>Have footage?<br/><em>Let's make it matter.</em></h2><p>Send the project details and I’ll turn them into a clear editing brief.</p></div>
+        <div class="contact-actions"><a class="btn btn-primary" href="https://wa.me/910000000000" target="_blank" rel="noopener">WhatsApp me ↗</a><a class="btn btn-ghost" href="mailto:hello@example.com">Email me →</a><div class="contact-links"><a href="https://instagram.com/yourusername" target="_blank" rel="noopener">Instagram</a><a href="#work">Portfolio</a></div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="container footer-wrap"><span>© <span id="year"></span> EDITLAB. Built to be seen.</span><span>Video editing · Thumbnails · Social creatives</span></div></footer>
+  <script>
+const menuBtn = document.getElementById('menuBtn');
+const nav = document.getElementById('nav');
+menuBtn?.addEventListener('click', () => {
+  const open = nav.classList.toggle('open');
+  menuBtn.setAttribute('aria-expanded', open);
+});
+nav?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  nav.classList.remove('open');
+  menuBtn?.setAttribute('aria-expanded','false');
+}));
+
+document.querySelectorAll('.filter').forEach(button => {
+  button.addEventListener('click', () => {
+    document.querySelectorAll('.filter').forEach(b => b.classList.remove('active'));
+    button.classList.add('active');
+    const filter = button.dataset.filter;
+    document.querySelectorAll('.project-card').forEach(card => {
+      const show = filter === 'all' || card.dataset.type === filter;
+      card.style.display = show ? '' : 'none';
+    });
+  });
+});
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('in'); });
+}, {threshold: .08});
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+document.getElementById('year').textContent = new Date().getFullYear();
+
+</script>
+</body>
+</html>
